@@ -1,0 +1,85 @@
+<!DOCTYPE html>  
+ <html>  
+      <head>  
+           <title>User Registration</title>
+          
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+          
+           <style>
+
+        .make-it-center{
+          margin: auto;
+          width: 75%;
+        }
+
+        .lefterr{
+            margin-left: -10%;
+        }
+
+        .required:after {
+          content:"*";
+          color: red;
+        }
+        .error{
+          color: red;
+        }
+
+        .ok{
+           float: right;
+        }
+    </style>
+      </head>  
+      <body>  
+           
+        
+        <nav class="navbar bg-light">
+            <div class="ok">    
+                <a href="registation.php"> home |</a>
+                <a href="log_in.html"> Login |</a>
+                <a href="index.html"> Registration |</a>
+                 </div>    
+           
+          </nav>
+        
+        
+        
+        
+        
+        
+        <br />  
+           <div class="container" style="width:500px;">  
+                <h3 >Register a New Account</h3><br />
+                <form >  
+                    
+                     <br />  
+                     <label>Name</label>  <span class="error">* <?php echo $nameErr;?></span>
+                     <input type="text" name="name" class="form-control" value="<?php echo $name;?>" /> <br/>
+                     <label>E-mail</label> <span class="error">* <?php echo $emailErr;?></span>
+                     <input type="text" name = "email" class="form-control" value="<?php echo $email;?>" /><br />
+                     <label>User Name</label>  <span class="error">* <?php echo $userErr;?></span>
+                     <input type="text" name = "username" class="form-control" value="<?php echo $username;?>" /><br />
+                     <label>Password</label>  <span class="error">* <?php echo $passErr;?></span>
+                     <input type="password" name = "password" class="form-control" /><br />
+                     <label>Confirm Password</label>  <span class="error">* <?php echo $confrmPassErr;?></span>
+                     <input type="password" name = "cnfrmPass" class="form-control" /><br />
+
+                    <fieldset>
+                    <legend>Gender</legend>  <span class="error">* <?php echo $genderErr;?></span>
+                    <input type="radio" id="male" name="gender" value="male">
+                     <label for="male">Male</label>                     
+                     <input type="radio" id="female" name="gender" value="female">
+                     <label for="female">Female</label>
+                     <input type="radio" id="other" name="gender" value="other">
+                     <label for="other">Other</label><br>
+
+                     <legend>Date of Birth:</legend>  <span class="error">* <?php echo $dobErr;?></span>
+                     <input type="date" name="dob"> <br><br>
+                    </fieldset> 
+                     
+                     <input type="submit" name="submit" value="Register" class="btn btn-info" /><br />
+                    
+                </form>  
+           </div>  
+           <br />  
+      </body>  
+ </html>  
